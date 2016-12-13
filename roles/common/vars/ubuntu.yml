@@ -1,0 +1,6 @@
+---
+ubuntu_common_packages:
+    - git
+    - zsh
+    - fail2ban
+    - htop
