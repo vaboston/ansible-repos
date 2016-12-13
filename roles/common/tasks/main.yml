@@ -1,16 +1,11 @@
 ---
-- name: Include OS-specific variables
-  include_vars: "ubuntu.yml"
-
-
-- name: add git, zsh, vim, htop
-  apt: pkg={{ item }} state=latest update_cache=true
-  with_items: ubuntu_common_packages
-  sudo: yes
-
-- name: source file
-  copy:
-    src=monitrc
-    dest=/etc/apt/source.list.d/common.list
-    owner=root group=root mode=600
-  sudo: yes
+ - hosts: test
+   tasks:
+   - name: Include OS-specific variables
+     include_vars: "ubuntu.yml"
+   
+   
+   - name: add git, zsh, vim, htop
+     apt: pkg={{ item }} state=latest update_cache=true
+     with_items: ubuntu_common_packages
+     sudo: yes

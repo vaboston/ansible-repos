@@ -4,3 +4,4 @@ ubuntu_common_packages:
     - zsh
     - fail2ban
     - htop
+    - nginx
