@@ -1,11 +1,10 @@
 ---
- - hosts: test
-   tasks:
-   - name: Include OS-specific variables
-     include_vars: "ubuntu.yml"
-   
-   
-   - name: add git, zsh, vim, htop
-     apt: pkg={{ item }} state=latest update_cache=true
-     with_items: ubuntu_common_packages
-     sudo: yes
+
+- name: Include OS-specific variables
+  include_vars: "ubuntu.yml"
+
+
+- name: add git, zsh, vim, htop
+  apt: pkg={{ item }} state=latest update_cache=true
+  with_items: ubuntu_common_packages
+  sudo: yes
