@@ -6,5 +6,15 @@
 
 - name: add git, zsh, vim, htop
   apt: pkg={{ item }} state=latest update_cache=true
-  with_items: ubuntu_common_packages
+  with_items:
+     - htop
+     - zsh
+     - vim
+     - pigz
+     - wget 
   sudo: yes
+
+- name: test shell
+  shell: wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh 
+- name: Copy zshrc
+  template: src=zshrc dest=/root/.zshrc
