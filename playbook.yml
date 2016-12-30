@@ -13,7 +13,7 @@
 
 
 - name: Install Nginx
-  hosts: all 
+  hosts: nginx 
   remote_user: root
  # remote_user: user
  # become: yes

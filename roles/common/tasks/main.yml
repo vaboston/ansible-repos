@@ -14,7 +14,7 @@
      - wget 
   sudo: yes
 
-- name: test shell
+- name: install oh-my-zsh
   shell: wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh 
 - name: Copy zshrc
   template: src=zshrc dest=/root/.zshrc
