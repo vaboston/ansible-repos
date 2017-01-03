@@ -24,3 +24,7 @@ Edit the `hosts` file, enter the server ip/name on which you want to deploy the 
 ansible-playbook -i hosts playbook.yml
 ```
 **Note:** Please don't forget to change `arbab` with your username
+
+### Todo:
+
+Add iptables for each node at proxy (ssh)
