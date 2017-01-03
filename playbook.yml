@@ -9,7 +9,7 @@
 
   roles:
     - common
-
+    - fail2ban
 
 
 - name: Install Nginx
